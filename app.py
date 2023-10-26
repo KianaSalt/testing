@@ -1,4 +1,5 @@
-from flask import Flask
+import urllib.request, json
+from flask import Flask, render_template, request
 import requests
 
 app = Flask(__name__)             # create an app instance
@@ -15,5 +16,7 @@ def hello():                      # method called hello
 }
 
     response = requests.get(url, headers=headers, params=querystring)
-    return response.json()
+    data = response.read(response)
+    dict = json.loads(data)
+    return render_template("index.html", datum=dict)
     #print(response.json())
