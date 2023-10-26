@@ -1,6 +1,7 @@
 import urllib.request, json
 from flask import Flask, render_template, request
 import requests
+import os
 
 app = Flask(__name__)             # create an app instance
 
@@ -13,10 +14,14 @@ def hello():                      # method called hello
     headers = {
 	"X-RapidAPI-Key": "4894c3a1bcmshd133c8566ef57e7p1c5692jsn39cf5eb18188",
 	"X-RapidAPI-Host": "best-booking-com-hotel.p.rapidapi.com"
-}
+    }
 
     response = requests.get(url, headers=headers, params=querystring)
-    data = response.read(response)
-    dict = json.loads(data)
-    return render_template("index.html", datum=dict)
+    data = response.json()
+    return render_template("index.html", datum=data)
+
+if __name__ == '__main__':
+    app.run(debug=True) 
+
+ 
     #print(response.json())
