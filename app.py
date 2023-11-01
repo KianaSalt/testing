@@ -12,13 +12,14 @@ def hello():                      # method called hello
 
     querystrings = [
     {"cityName": "Berlin", "countryName": "Germany"},
-    {"cityName": "Atlanta", "countryName": "Georgia"}
+    {"cityName": "Atlanta", "countryName": "Georgia"},
+    {"cityName": "Bangkok", "countryName": "Thailand"}
     ]
    #querystring = {"cityName":"Berlin","countryName":"Germany"}
     #querystring2 = {"cityName":"Atlanta","countryName":"Georgia"}
 
     headers = {
-	"X-RapidAPI-Key": "4894c3a1bcmshd133c8566ef57e7p1c5692jsn39cf5eb18188",
+	"X-RapidAPI-Key": "f483517b4amshef1d273499a38dep145e52jsn49c64fb576fb",
 	"X-RapidAPI-Host": "best-booking-com-hotel.p.rapidapi.com"
     }
     all_data = []
