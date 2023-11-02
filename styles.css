@@ -1,0 +1,33 @@
+/* Style for the parent container holding all hotel entries */
+.hotel-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+/* Style for each hotel entry */
+.hotel-entry {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the hotel entry heading (h2) */
+.hotel-entry h2 {
+    color: #333;
+    font-size: 18px;
+}
+
+/* Style for links */
+.hotel-entry a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+/* Style for links on hover */
+.hotel-entry a:hover {
+    text-decoration: underline;
+}
