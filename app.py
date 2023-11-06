@@ -35,15 +35,32 @@ def hello():                      # method called hello
     return all_data
 
 # Display the data
-    for item in all_data:
-        print(item)
+    #for item in all_data:
+        #print(item)
 
     #response = requests.get(url, headers=headers, params=querystring)
     #data = response.json()
     #return render_template("index.html", datum=data)
 
+@app.route("/booking")                   
+def book():
+
+    url = "https://apidojo-booking-v1.p.rapidapi.com/currency/get-exchange-rates"
+
+    querystring = {"base_currency":"USD","languagecode":"en-us"}
+
+    headers = {
+	"X-RapidAPI-Key": "b9acad5e50msh9b9087d682ca9d9p1a812fjsnbc3e76195a9b",
+	"X-RapidAPI-Host": "apidojo-booking-v1.p.rapidapi.com"
+    }
+
+    response = requests.get(url, headers=headers, params=querystring)
+    data = response.json()
+    return render_template("booking.html", datum=data)
+
+
 if __name__ == '__main__':
     app.run(debug=True) 
 
  
-    #print(response.json())
+    
